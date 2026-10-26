@@ -26,7 +26,7 @@ export default defineConfig({
   // Your production domain — used for canonical URLs, Open Graph tags, the
   // sitemap, robots.txt, llms.txt, and the JSON-LD. CHANGE THIS to your own
   // domain; everything URL-bound is derived from it.
-  site: 'https://example.com',
+  site: 'https://pobedaii.me',
 
   // Preserve Astro's pre-v7 HTML whitespace handling. Astro 7 changed the
   // default `compressHTML` from `true` to `'jsx'`, which strips whitespace with
