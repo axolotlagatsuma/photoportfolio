@@ -65,8 +65,10 @@
   --gap: clamp(0.5rem, 1.1vw, 1rem);
   --read: 72ch;
 
-  --serif-display: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, 'Times New Roman', serif;
-  --serif-body: 'EB Garamond', 'EB Garamond Fallback', Georgia, 'Times New Roman', serif;
+
+  --sans: 'Inter Variable', system-ui, sans-serif;
+  --serif-display: 'Inter Variable', system-ui, sans-serif;
+  --serif-body: 'Inter Variable', system-ui, sans-serif;
   /* Second-script name in a Song-style serif. If you self-host a subset (see the
      note above), add its family first; the platform 宋体 / Noto Serif SC fonts
      below are the cross-device fallbacks. */
