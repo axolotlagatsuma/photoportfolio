@@ -9,19 +9,19 @@ const posts = (
 ---
 
 <Layout
-  title="Photo Blog"
-  description="Field notes on light, places, and the craft of photography."
+  title="Foto Blog"
+  description="notlarım"
 >
   <header class="blog-head">
-    <h1 class="page__title">Photo Blog</h1>
+    <h1 class="page__title">Foto Blog</h1>
     <p class="blog-head__sub">
-      Field notes on light, weather, and the quiet shape of a place.
+      notlarım
     </p>
   </header>
 
   {
     posts.length === 0 ? (
-      <p class="empty">Please wait patiently for the first post.</p>
+      <p class="empty">hiçbir gönderi yok</p>
     ) : (
       <ul class="post-list">
         {posts.map((post) => (
