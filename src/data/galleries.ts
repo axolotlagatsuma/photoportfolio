@@ -13,8 +13,10 @@
 //  within the same month, locations sort Z→A. Photos without a date yet sink
 //  to the bottom — no filename renumbering needed when adding older photos.
 //
-//  The entries below are EXAMPLES that match the bundled placeholder images.
-//  Replace the locations with real ones (or delete entries) as you add photos.
+//  Every photo currently in src/assets/digital/ has an entry below, captioned
+//  from its filename. Add a real year/month/location to an entry to turn its
+//  caption into "Month Year, Location" and sort it by date; leave them at 0 to
+//  keep the filename order.
 // ────────────────────────────────────────────────────────────────────────────
 
 export interface GalleryPhoto {
@@ -25,15 +27,31 @@ export interface GalleryPhoto {
 }
 
 export const digital: GalleryPhoto[] = [
-  { year: 2024, month: 9, location: "Mountain ridge", file: "digital-01.jpg" },
-  { year: 2024, month: 9, location: "Coastal cliffs", file: "digital-02.jpg" },
-  { year: 2024, month: 7, location: "Old harbor", file: "digital-03.jpg" },
-  { year: 2024, month: 6, location: "Pine forest", file: "digital-04.jpg" },
-  // The rest have no caption yet — they simply show on their own until you add a location.
-  { year: 0, month: 0, location: "", file: "digital-05.jpg" },
-  { year: 0, month: 0, location: "", file: "digital-06.jpg" },
-  { year: 0, month: 0, location: "", file: "digital-07.jpg" },
-  { year: 0, month: 0, location: "", file: "digital-08.jpg" },
+  { year: 0, month: 0, location: "Oyun", file: "01-oyun.JPG" },
+  { year: 0, month: 0, location: "Balık", file: "02-balik.JPG" },
+  { year: 0, month: 0, location: "İlk makro", file: "03-ilk-makro.JPG" },
+  { year: 0, month: 0, location: "Cemal Süreya", file: "04-cemalsureya.JPG" },
+  { year: 0, month: 0, location: "Artistik", file: "05-artistik.JPG" },
+  { year: 0, month: 0, location: "Libya CD", file: "06-libyacd.JPG" },
+  { year: 0, month: 0, location: "Ahankara", file: "07-ahankara.jpg" },
+  { year: 0, month: 0, location: "Karanfil", file: "08-karanfil.jpg" },
+  { year: 0, month: 0, location: "Ve Hezo", file: "09-ve-hezo.jpg" },
+  { year: 0, month: 0, location: "Opet", file: "10-opet.jpg" },
+  { year: 0, month: 0, location: "Küllükler çok estetik", file: "11-kulluklercokestetik.JPG" },
+  { year: 0, month: 0, location: "Kelebek", file: "12-kebelek.JPG" },
+  { year: 0, month: 0, location: "Crow", file: "13-crow.jpg" },
+  { year: 0, month: 0, location: "Autumn", file: "14-autumn.jpg" },
+  { year: 0, month: 0, location: "Red and blue", file: "15-redandblue.jpg" },
+  { year: 0, month: 0, location: "Şahin güvesi", file: "16-sahinguvesi.jpg" },
+  { year: 0, month: 0, location: "Flowers of my heart", file: "17-flowers-of-my-heart.jpg" },
+  { year: 0, month: 0, location: "Hotel Kroos walk", file: "18-hotelkrooswalk.jpg" },
+  { year: 0, month: 0, location: "Dehazemaxxin", file: "19-dehazemaxxin.jpg" },
+  { year: 0, month: 0, location: "Yürüyorum sensiz", file: "20-yuruyorumsensiz.jpg" },
+  { year: 0, month: 0, location: "Shoot", file: "21-shoot.jpg" },
+  { year: 0, month: 0, location: "Goal", file: "22-goal.jpg" },
+  { year: 0, month: 0, location: "Goal kick", file: "23-goalkick.jpg" },
+  { year: 0, month: 0, location: "İzindeyiz", file: "24-izindeyiz.jpg" },
+  { year: 0, month: 0, location: "Matem", file: "25-matem.jpg" },
 ];
 
 export const analog: GalleryPhoto[] = [
