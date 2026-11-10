@@ -1,0 +1,23 @@
+name: Build check
+
+# Verify pull requests compile before they reach main. This workflow only
+# builds — it never deploys — so a branch can be tested without touching the
+# live site. Deployment stays in deploy.yml, which runs on main only.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build

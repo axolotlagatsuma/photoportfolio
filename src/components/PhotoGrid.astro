@@ -39,18 +39,18 @@ const meta = new Map<string, GalleryPhoto>(
 );
 
 // Order by the described date, newest first, so adding an older photo never
-// requires renumbering files. Within the same month + year, descriptions sort
-// Z→A (an "a…" location appears below a "z…" one). Photos without a date yet
-// (year/month 0) sink to the bottom; filename (numeric, descending) is the
-// final tie-break so the order is stable.
+// requires renumbering files. Within the same month + year, filenames keep
+// their numeric order (newest number first) and the description is only a final
+// tie-break. Photos without a date yet (year/month 0) sink to the bottom and
+// keep that same numeric order, so captions never reshuffle the gallery.
 const entries = Object.entries(files).sort(([pathA], [pathB]) => {
   const a = meta.get(pathA.split('/').pop()!);
   const b = meta.get(pathB.split('/').pop()!);
   return (
     (b?.year ?? 0) - (a?.year ?? 0) ||
     (b?.month ?? 0) - (a?.month ?? 0) ||
-    (b?.location ?? '').localeCompare(a?.location ?? '') ||
-    pathB.localeCompare(pathA, undefined, { numeric: true })
+    pathB.localeCompare(pathA, undefined, { numeric: true }) ||
+    (b?.location ?? '').localeCompare(a?.location ?? '')
   );
 });
 function describe(e: GalleryPhoto | undefined): string {
